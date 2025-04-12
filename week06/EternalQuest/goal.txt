@@ -1,3 +1,0 @@
-5000
-[ ], Simple Goal, fdadsaf, adf, 50000
-[X], Simple Goal, afds, adsf, 5000
