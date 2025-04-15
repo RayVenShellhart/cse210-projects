@@ -10,20 +10,10 @@ public abstract class Excersise
         _minutes = minutes;
     }
 
-    public virtual double DistanceSwam()
-    {
-        return _distance * 50 / 1000 * 0.62;
-    }
+    public abstract double Distance();
 
-    public virtual double Speed()
-    {
-        return (_distance / _minutes) * 60;
-    }
-
-    public virtual double Pace()
-    {
-        return _minutes / _distance;
-    }
+    public abstract double Speed();
+    public abstract double Pace();
 
     public virtual string GetDate()
     {

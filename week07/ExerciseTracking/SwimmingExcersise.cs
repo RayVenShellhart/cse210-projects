@@ -6,9 +6,14 @@ public class SwimmingExcersise : Excersise
 
     }
 
+    public override double Distance()
+    {
+        return _distance * 50 / 1000 * 0.62;
+    }
+
     public override double Speed()
     {
-        _swimSpeed = DistanceSwam();
+        _swimSpeed = Distance();
         return (_swimSpeed / _minutes) * 60;
     }
 
@@ -19,6 +24,6 @@ public class SwimmingExcersise : Excersise
 
     public override string GetSummary()
     {
-        return $"{GetDate()} Swimming ({_minutes} min)- Laps {_distance}, Distance {DistanceSwam().ToString(".0##")} miles, Speed {Speed().ToString(".0##")} mph, Pace {Pace().ToString(".0##")} min per mile.";
+        return $"{GetDate()} Swimming ({_minutes} min)- Laps {_distance}, Distance {Distance().ToString(".0##")} miles, Speed {Speed().ToString(".0##")} mph, Pace {Pace().ToString(".0##")} min per mile.";
     }
 }
